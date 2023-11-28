@@ -1,7 +1,7 @@
 //import 'package:familiar_stranger_v2/controllers/user/authController.dart';
-import 'package:familiar_stranger_v2/models/notification.dart';
-import 'package:familiar_stranger_v2/services/api.dart';
-import 'package:familiar_stranger_v2/services/socketio.dart';
+import 'package:fs_fe/models/notification.dart';
+import 'package:fs_fe/services/api.dart';
+import 'package:fs_fe/services/socketio.dart';
 import 'package:get/get.dart';
 //import 'package:get_storage/get_storage.dart';
 

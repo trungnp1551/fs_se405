@@ -1,6 +1,6 @@
-import 'package:familiar_stranger_v2/controllers/conversationController.dart';
-import 'package:familiar_stranger_v2/controllers/user/userController.dart';
-import 'package:familiar_stranger_v2/ui/screens/chat/widgets/message.dart';
+import 'package:fs_fe/controllers/conversationController.dart';
+import 'package:fs_fe/controllers/user/userController.dart';
+import 'package:fs_fe/ui/screens/chat/widgets/message.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

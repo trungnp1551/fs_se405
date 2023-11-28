@@ -1,12 +1,12 @@
-import 'package:familiar_stranger_v2/config/utils/export_file.dart';
-import 'package:familiar_stranger_v2/controllers/user/notificationController.dart';
-import 'package:familiar_stranger_v2/controllers/user/userController.dart';
-import 'package:familiar_stranger_v2/main.dart';
-import 'package:familiar_stranger_v2/models/user.dart';
-import 'package:familiar_stranger_v2/ui/components/backgrounds/home_bg.dart';
-import 'package:familiar_stranger_v2/ui/screens/friend/friend_profile/friend_profile.dart';
-import 'package:familiar_stranger_v2/ui/screens/friend/widgets/friend_model.dart';
-import 'package:familiar_stranger_v2/ui/screens/friend/widgets/stranger_model.dart';
+import 'package:fs_fe/config/utils/export_file.dart';
+import 'package:fs_fe/controllers/user/notificationController.dart';
+import 'package:fs_fe/controllers/user/userController.dart';
+import 'package:fs_fe/main.dart';
+import 'package:fs_fe/models/user.dart';
+import 'package:fs_fe/ui/components/backgrounds/home_bg.dart';
+import 'package:fs_fe/ui/screens/friend/friend_profile/friend_profile.dart';
+import 'package:fs_fe/ui/screens/friend/widgets/friend_model.dart';
+import 'package:fs_fe/ui/screens/friend/widgets/stranger_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

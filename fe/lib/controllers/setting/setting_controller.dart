@@ -1,5 +1,5 @@
-import 'package:familiar_stranger_v2/models/setting.dart';
-import 'package:familiar_stranger_v2/services/api.dart';
+import 'package:fs_fe/models/setting.dart';
+import 'package:fs_fe/services/api.dart';
 import 'package:get/get.dart';
 
 class SettingController extends GetxController {

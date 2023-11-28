@@ -1,5 +1,5 @@
-import 'package:familiar_stranger_v2/config/utils/export_file.dart';
-import 'package:familiar_stranger_v2/models/message.dart' as messagemodel;
+import 'package:fs_fe/config/utils/export_file.dart';
+import 'package:fs_fe/models/message.dart' as messagemodel;
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

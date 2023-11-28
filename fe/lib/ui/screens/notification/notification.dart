@@ -1,8 +1,8 @@
-import 'package:familiar_stranger_v2/config/utils/export_file.dart';
-import 'package:familiar_stranger_v2/controllers/user/notificationController.dart';
-import 'package:familiar_stranger_v2/ui/components/backgrounds/home_bg.dart';
-import 'package:familiar_stranger_v2/ui/components/widgets/buttons/leadIcon_button.dart';
-import 'package:familiar_stranger_v2/ui/screens/notification/widgets/type_notification.dart';
+import 'package:fs_fe/config/utils/export_file.dart';
+import 'package:fs_fe/controllers/user/notificationController.dart';
+import 'package:fs_fe/ui/components/backgrounds/home_bg.dart';
+import 'package:fs_fe/ui/components/widgets/buttons/leadIcon_button.dart';
+import 'package:fs_fe/ui/screens/notification/widgets/type_notification.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

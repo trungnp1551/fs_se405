@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
-import 'package:familiar_stranger_v2/models/image.dart' as img;
+import 'package:fs_fe/models/image.dart' as img;
 
 // ignore: must_be_immutable
 class ImageShow extends StatelessWidget {

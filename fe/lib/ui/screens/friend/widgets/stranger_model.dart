@@ -1,5 +1,5 @@
-import 'package:familiar_stranger_v2/config/utils/app_colors.dart';
-import 'package:familiar_stranger_v2/controllers/user/userController.dart';
+import 'package:fs_fe/config/utils/app_colors.dart';
+import 'package:fs_fe/controllers/user/userController.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

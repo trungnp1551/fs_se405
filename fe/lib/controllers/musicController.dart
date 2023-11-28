@@ -1,6 +1,6 @@
 import 'package:audioplayers/audioplayers.dart';
-import 'package:familiar_stranger_v2/models/song.dart';
-import 'package:familiar_stranger_v2/services/api.dart';
+import 'package:fs_fe/models/song.dart';
+import 'package:fs_fe/services/api.dart';
 import 'package:get/get.dart';
 
 class MusicController extends GetxController {

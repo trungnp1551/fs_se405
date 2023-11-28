@@ -1,14 +1,14 @@
-import 'dart:math';
+//import 'dart:math';
 
 import 'package:agora_rtc_engine/agora_rtc_engine.dart';
-import 'package:familiar_stranger_v2/config/utils/export_file.dart';
-import 'package:familiar_stranger_v2/services/call_token.dart';
+import 'package:fs_fe/config/utils/export_file.dart';
+import 'package:fs_fe/services/call_token.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 class CallingFunction {
   ClientRoleType? hostRole = ClientRoleType.clientRoleBroadcaster;
   late RtcEngine agoraEngine;
-  int? _remoteUid;
+  //int? _remoteUid;
   RtcConnection connect = RtcConnection();
   TokenGenerator tokenGenerator = TokenGenerator();
 

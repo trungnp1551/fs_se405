@@ -1,5 +1,5 @@
-import 'package:familiar_stranger_v2/models/user.dart';
-import 'package:familiar_stranger_v2/services/api.dart';
+import 'package:fs_fe/models/user.dart';
+import 'package:fs_fe/services/api.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 

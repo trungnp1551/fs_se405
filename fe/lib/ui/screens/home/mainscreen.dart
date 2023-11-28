@@ -1,12 +1,12 @@
-import 'package:familiar_stranger_v2/config/utils/export_file.dart';
-import 'package:familiar_stranger_v2/controllers/menuController.dart';
-import 'package:familiar_stranger_v2/controllers/time_counter.dart';
-import 'package:familiar_stranger_v2/controllers/user/notificationController.dart';
-import 'package:familiar_stranger_v2/ui/components/widgets/dialog/dialog_yes_no.dart';
-import 'package:familiar_stranger_v2/ui/screens/friend/list_friend/list_friend.dart';
-import 'package:familiar_stranger_v2/ui/screens/home/home.dart';
-import 'package:familiar_stranger_v2/ui/screens/profile/profile.dart';
-import 'package:familiar_stranger_v2/ui/screens/setting/setting.dart';
+import 'package:fs_fe/config/utils/export_file.dart';
+import 'package:fs_fe/controllers/menuController.dart';
+import 'package:fs_fe/controllers/time_counter.dart';
+import 'package:fs_fe/controllers/user/notificationController.dart';
+import 'package:fs_fe/ui/components/widgets/dialog/dialog_yes_no.dart';
+import 'package:fs_fe/ui/screens/friend/list_friend/list_friend.dart';
+import 'package:fs_fe/ui/screens/home/home.dart';
+import 'package:fs_fe/ui/screens/profile/profile.dart';
+import 'package:fs_fe/ui/screens/setting/setting.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

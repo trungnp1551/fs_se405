@@ -1,11 +1,11 @@
-import 'package:audioplayers/audioplayers.dart';
-import 'package:familiar_stranger_v2/config/utils/export_file.dart';
-import 'package:familiar_stranger_v2/controllers/musicController.dart';
-import 'package:familiar_stranger_v2/services/socketio.dart';
-import 'package:familiar_stranger_v2/ui/components/backgrounds/music_bg.dart';
-import 'package:familiar_stranger_v2/ui/components/widgets/buttons/round_button.dart';
-import 'package:familiar_stranger_v2/ui/screens/chat/music/widgets/option_music.dart';
-import 'package:familiar_stranger_v2/ui/screens/chat/music/widgets/selected_music.dart';
+// import 'package:audioplayers/audioplayers.dart';
+import 'package:fs_fe/config/utils/export_file.dart';
+import 'package:fs_fe/controllers/musicController.dart';
+import 'package:fs_fe/services/socketio.dart';
+import 'package:fs_fe/ui/components/backgrounds/music_bg.dart';
+import 'package:fs_fe/ui/components/widgets/buttons/round_button.dart';
+import 'package:fs_fe/ui/screens/chat/music/widgets/option_music.dart';
+import 'package:fs_fe/ui/screens/chat/music/widgets/selected_music.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

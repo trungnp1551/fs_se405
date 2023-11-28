@@ -1,10 +1,10 @@
-import 'package:familiar_stranger_v2/controllers/conversationController.dart';
-import 'package:familiar_stranger_v2/controllers/musicController.dart';
-import 'package:familiar_stranger_v2/controllers/user/notificationController.dart';
-import 'package:familiar_stranger_v2/services/api.dart';
-import 'package:familiar_stranger_v2/ui/components/widgets/dialog/dialog_calling.dart';
+import 'package:fs_fe/controllers/conversationController.dart';
+import 'package:fs_fe/controllers/musicController.dart';
+import 'package:fs_fe/controllers/user/notificationController.dart';
+import 'package:fs_fe/services/api.dart';
+import 'package:fs_fe/ui/components/widgets/dialog/dialog_calling.dart';
 import 'package:get/get.dart';
-import 'package:http/http.dart';
+// import 'package:http/http.dart';
 import 'package:socket_io_client/socket_io_client.dart' as socketIO;
 
 late socketIO.Socket socket;
@@ -15,7 +15,7 @@ NotificationController notificationController =
 MusicController musicController = Get.put(MusicController());
 void connectSocket() {
   socket = socketIO
-      .io('https://fsserverv2-production.up.railway.app', <String, dynamic>{
+      .io('http://10.45.89.39:3000', <String, dynamic>{
     'transports': ['websocket'],
     'autoConnect': false,
   });

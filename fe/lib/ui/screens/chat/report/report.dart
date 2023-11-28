@@ -1,7 +1,7 @@
-import 'package:familiar_stranger_v2/config/utils/app_colors.dart';
-import 'package:familiar_stranger_v2/ui/components/backgrounds/home_bg.dart';
-import 'package:familiar_stranger_v2/ui/components/widgets/buttons/round_button.dart';
-import 'package:familiar_stranger_v2/ui/screens/chat/widgets/multi_textline.dart';
+import 'package:fs_fe/config/utils/app_colors.dart';
+import 'package:fs_fe/ui/components/backgrounds/home_bg.dart';
+import 'package:fs_fe/ui/components/widgets/buttons/round_button.dart';
+import 'package:fs_fe/ui/screens/chat/widgets/multi_textline.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

@@ -1,10 +1,10 @@
-import 'package:familiar_stranger_v2/config/utils/export_file.dart';
-import 'package:familiar_stranger_v2/controllers/user/authController.dart';
-import 'package:familiar_stranger_v2/ui/components/backgrounds/welcome_bg.dart';
-import 'package:familiar_stranger_v2/ui/screens/welcome/widgets/circle_button.dart';
-import 'package:familiar_stranger_v2/ui/screens/welcome/widgets/left_click.dart';
-import 'package:familiar_stranger_v2/ui/screens/welcome/widgets/password_textfield.dart';
-import 'package:familiar_stranger_v2/ui/screens/welcome/widgets/right_click.dart';
+import 'package:fs_fe/config/utils/export_file.dart';
+import 'package:fs_fe/controllers/user/authController.dart';
+import 'package:fs_fe/ui/components/backgrounds/welcome_bg.dart';
+import 'package:fs_fe/ui/screens/welcome/widgets/circle_button.dart';
+import 'package:fs_fe/ui/screens/welcome/widgets/left_click.dart';
+import 'package:fs_fe/ui/screens/welcome/widgets/password_textfield.dart';
+import 'package:fs_fe/ui/screens/welcome/widgets/right_click.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

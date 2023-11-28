@@ -1,8 +1,8 @@
-import 'package:familiar_stranger_v2/controllers/setting/setting_controller.dart';
-import 'package:familiar_stranger_v2/controllers/user/authController.dart';
-import 'package:familiar_stranger_v2/controllers/user/userController.dart';
-import 'package:familiar_stranger_v2/services/socketio.dart';
-import 'package:familiar_stranger_v2/ui/components/backgrounds/welcome_bg.dart';
+import 'package:fs_fe/controllers/setting/setting_controller.dart';
+import 'package:fs_fe/controllers/user/authController.dart';
+import 'package:fs_fe/controllers/user/userController.dart';
+import 'package:fs_fe/services/socketio.dart';
+import 'package:fs_fe/ui/components/backgrounds/welcome_bg.dart';
 import 'package:flutter/material.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:get/get.dart';

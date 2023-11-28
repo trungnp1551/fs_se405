@@ -1,19 +1,19 @@
 import 'dart:convert';
-import 'package:familiar_stranger_v2/controllers/conversationController.dart';
-import 'package:familiar_stranger_v2/controllers/musicController.dart';
-import 'package:familiar_stranger_v2/controllers/setting/setting_controller.dart';
-import 'package:familiar_stranger_v2/controllers/user/notificationController.dart';
-import 'package:familiar_stranger_v2/controllers/user/userController.dart';
-import 'package:familiar_stranger_v2/models/user.dart';
-import 'package:familiar_stranger_v2/models/image.dart' as img;
-import 'package:familiar_stranger_v2/models/song.dart';
-import 'package:familiar_stranger_v2/services/socketio.dart';
+import 'package:fs_fe/controllers/conversationController.dart';
+import 'package:fs_fe/controllers/musicController.dart';
+import 'package:fs_fe/controllers/setting/setting_controller.dart';
+import 'package:fs_fe/controllers/user/notificationController.dart';
+import 'package:fs_fe/controllers/user/userController.dart';
+import 'package:fs_fe/models/user.dart';
+import 'package:fs_fe/models/image.dart' as img;
+import 'package:fs_fe/models/song.dart';
+//import 'package:fs_fe/services/socketio.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:http/http.dart' as http;
 
-var ip = 'fsserverv2-production.up.railway.app';
+var ip = '10.45.89.39:3000';
 
 final userData = GetStorage();
 //var token = userData.read('token');
@@ -28,7 +28,7 @@ NotificationController notificationController =
 
 Future<bool> submitLogin(phoneNumber, password) async {
   try {
-    var response = await http.post(Uri.https(ip, '/user/login'),
+    var response = await http.post(Uri.http(ip, '/user/login'),
         body: ({"phoneNumber": phoneNumber, "password": password}));
     var jsonData = jsonDecode(response.body);
     if (jsonData['success'] == true) {
@@ -58,7 +58,7 @@ Future<bool> getListFriend() async {
   userController.currentListFriend = [];
   userController.currentListRecentConnect = [];
   try {
-    var response = await http.get(Uri.https(ip, '/user/friend'),
+    var response = await http.get(Uri.http(ip, '/user/friend'),
         headers: ({"authorization": token}));
     var jsonData = jsonDecode(response.body);
     if (jsonData['success'] == true) {
@@ -79,7 +79,7 @@ Future<bool> addRecentConnect(id) async {
   var token = userData.read('token');
   try {
     var response = await http.post(
-        Uri.https(ip, '/user/addrecentconnect'),
+        Uri.http(ip, '/user/addrecentconnect'),
         body: ({"id": id}),
         headers: ({"authorization": token}));
     var jsonData = jsonDecode(response.body);
@@ -97,7 +97,7 @@ Future<bool> addRecentConnect(id) async {
 Future<bool> checkUserExits(phoneNumber) async {
   try {
     var response = await http.post(
-        Uri.https(ip, '/user/forgot/checkExists'),
+        Uri.http(ip, '/user/forgot/checkExists'),
         body: ({"phoneNumber": phoneNumber}));
     var jsonData = jsonDecode(response.body);
     return jsonData['success'];
@@ -110,7 +110,7 @@ Future<bool> checkUserExits(phoneNumber) async {
 Future<int> getCodeResetPass(phoneNumber) async {
   try {
     var response = await http.post(
-        Uri.https(ip, '/user/forgot/sendmail'),
+        Uri.http(ip, '/user/forgot/sendmail'),
         body: ({"phoneNumber": phoneNumber}));
     var jsonData = jsonDecode(response.body);
 
@@ -127,7 +127,7 @@ Future<int> getCodeResetPass(phoneNumber) async {
 
 Future<bool> submitSignUp(phoneNumber, password) async {
   try {
-    var response = await http.post(Uri.https(ip, '/user'),
+    var response = await http.post(Uri.http(ip, '/user'),
         body: ({"phoneNumber": phoneNumber, "password": password}));
     var jsonData = jsonDecode(response.body);
     return jsonData['success'];
@@ -140,7 +140,7 @@ Future<bool> submitSignUp(phoneNumber, password) async {
 Future<bool> getUserByToken() async {
   var token = userData.read('token');
   try {
-    var response = await http.get(Uri.https(ip, '/user'),
+    var response = await http.get(Uri.http(ip, '/user'),
         headers: ({
           'Content-type': 'application/json',
           'Accept': 'application/json',
@@ -167,7 +167,7 @@ Future<bool> getUserByToken() async {
 
 Future<bool> getUserByID(id) async {
   try {
-    var response = await http.get(Uri.https(ip, '/user/getUser/$id'));
+    var response = await http.get(Uri.http(ip, '/user/getUser/$id'));
     var jsonData = jsonDecode(response.body);
     if (jsonData['success'] == true) {
       conversationController.targetUser = User.fromJson(jsonData['user']).obs;
@@ -183,7 +183,7 @@ Future<bool> getUserByID(id) async {
 Future<bool> changeSetting(position) async {
   var token = userController.currentUser.value.token.toString();
   try {
-    var response = await http.patch(Uri.https(ip, '/user/changesetting'),
+    var response = await http.patch(Uri.http(ip, '/user/changesetting'),
         body: ({"position": "$position"}), headers: ({"authorization": token}));
     var jsonData = jsonDecode(response.body);
     return jsonData['success'];
@@ -196,7 +196,7 @@ Future<bool> changeSetting(position) async {
 Future<bool> changeStatus(status) async {
   var token = userController.currentUser.value.token.toString();
   try {
-    var response = await http.patch(Uri.https(ip, '/user/changestatus'),
+    var response = await http.patch(Uri.http(ip, '/user/changestatus'),
         body: ({"status": status}), headers: ({"authorization": token}));
     var jsonData = jsonDecode(response.body);
     return jsonData['success'];
@@ -209,7 +209,7 @@ Future<bool> changeStatus(status) async {
 Future<bool> editProfile(username, emotion, yearOfB, description, gmail) async {
   var token = userController.currentUser.value.token.toString();
   try {
-    var response = await http.patch(Uri.https(ip, '/user'),
+    var response = await http.patch(Uri.http(ip, '/user'),
         body: ({
           "username": username,
           "emotion": emotion,
@@ -230,7 +230,7 @@ Future<bool> uploadAvatar(path) async {
   var token = userController.currentUser.value.token.toString();
   try {
     var request =
-        http.MultipartRequest('POST', Uri.https(ip, '/user/upAvatar'));
+        http.MultipartRequest('POST', Uri.http(ip, '/user/upAvatar'));
     request.files.add(await http.MultipartFile.fromPath('avatar', path));
     request.headers.addAll(
         {'Content-type': 'multipart/form-data', 'authorization': token});
@@ -258,7 +258,7 @@ Future<bool> upImage(path) async {
   var token = userController.currentUser.value.token.toString();
   try {
     var request =
-        http.MultipartRequest('POST', Uri.https(ip, '/user/addImage'));
+        http.MultipartRequest('POST', Uri.http(ip, '/user/addImage'));
     request.files.add(await http.MultipartFile.fromPath('image', path));
     request.headers.addAll(
         {'Content-type': 'multipart/form-data', 'authorization': token});
@@ -282,7 +282,7 @@ Future<bool> upImage(path) async {
 
 Future<String> upImageMessage(path) async {
   try {
-    var request = http.MultipartRequest('POST', Uri.https(ip, '/user/addImageMess'));
+    var request = http.MultipartRequest('POST', Uri.http(ip, '/user/addImageMess'));
     request.files.add(await http.MultipartFile.fromPath('image', path));
 
     var response = await request.send();
@@ -291,17 +291,17 @@ Future<String> upImageMessage(path) async {
     if (jsonData['success']) {
       return jsonData['imageUrl'].toString();
     }
-    return 'https://res.cloudinary.com/fs-app/image/upload/v1649060973/unnamed_vfgxcq.png';
+    return 'http://res.cloudinary.com/fs-app/image/upload/v1649060973/unnamed_vfgxcq.png';
   } on Exception catch (e) {
     debugPrint(e.toString());
-    return 'https://res.cloudinary.com/fs-app/image/upload/v1649060973/unnamed_vfgxcq.png';
+    return 'http://res.cloudinary.com/fs-app/image/upload/v1649060973/unnamed_vfgxcq.png';
   }
 }
 
 
 Future<bool> submitResetPassword(phoneNumber, newPassword) async {
   try {
-    var response = await http.post(Uri.https(ip, '/user/resetPassword'),
+    var response = await http.post(Uri.http(ip, '/user/resetPassword'),
         body: ({"phoneNumber": phoneNumber, "newPassword": newPassword}));
     var jsonData = jsonDecode(response.body);
     return jsonData['success'];
@@ -314,7 +314,7 @@ Future<bool> submitResetPassword(phoneNumber, newPassword) async {
 Future<bool> addFriend(friendId) async {
   var token = userController.currentUser.value.token.toString();
   try {
-    var response = await http.post(Uri.https(ip, '/user/friend'),
+    var response = await http.post(Uri.http(ip, '/user/friend'),
         body: ({"friendId": friendId}),
         headers: ({"authorization": token}));
     var jsonData = jsonDecode(response.body);
@@ -331,7 +331,7 @@ Future<bool> addFriend(friendId) async {
 
 Future<bool> addNotificationToData(senderId, targetId, type, content) async {
   try {
-    var response = await http.post(Uri.https(ip, '/notification'),
+    var response = await http.post(Uri.http(ip, '/notification'),
         body: ({
           "senderId": senderId,
           "targetId": targetId,
@@ -352,7 +352,7 @@ Future<bool> addNotificationToData(senderId, targetId, type, content) async {
 Future<bool> getNotification() async {
   var token = userController.currentUser.value.token.toString();
   try {
-    var response = await http.get(Uri.https(ip, '/notification'),
+    var response = await http.get(Uri.http(ip, '/notification'),
         headers: ({"authorization": token}));
     var jsonData = jsonDecode(response.body);
 
@@ -372,7 +372,7 @@ Future<bool> getNotification() async {
 
 Future<bool> getAllSong() async {
   try {
-    var response = await http.get(Uri.https(ip, '/music'));
+    var response = await http.get(Uri.http(ip, '/music'));
     var jsonData = jsonDecode(response.body);
 
     if (jsonData['success'] == true) {

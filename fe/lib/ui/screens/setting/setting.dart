@@ -1,9 +1,9 @@
-import 'package:familiar_stranger_v2/config/utils/export_file.dart';
-import 'package:familiar_stranger_v2/controllers/setting/setting_controller.dart';
-import 'package:familiar_stranger_v2/controllers/user/authController.dart';
-import 'package:familiar_stranger_v2/ui/components/backgrounds/home_bg.dart';
-import 'package:familiar_stranger_v2/ui/screens/setting/widgets/click_item.dart';
-import 'package:familiar_stranger_v2/ui/screens/setting/widgets/switch_item.dart';
+import 'package:fs_fe/config/utils/export_file.dart';
+import 'package:fs_fe/controllers/setting/setting_controller.dart';
+import 'package:fs_fe/controllers/user/authController.dart';
+import 'package:fs_fe/ui/components/backgrounds/home_bg.dart';
+import 'package:fs_fe/ui/screens/setting/widgets/click_item.dart';
+import 'package:fs_fe/ui/screens/setting/widgets/switch_item.dart';
 import 'package:flutter/material.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:get/get.dart';

@@ -1,10 +1,10 @@
-import 'package:familiar_stranger_v2/config/utils/export_file.dart';
-import 'package:familiar_stranger_v2/controllers/conversationController.dart';
-import 'package:familiar_stranger_v2/controllers/user/userController.dart';
-import 'package:familiar_stranger_v2/services/socketio.dart';
-import 'package:familiar_stranger_v2/ui/components/backgrounds/chatroom_bg.dart';
-import 'package:familiar_stranger_v2/ui/screens/chat/widgets/conversation.dart';
-import 'package:familiar_stranger_v2/ui/screens/chat/widgets/message_bar.dart';
+import 'package:fs_fe/config/utils/export_file.dart';
+import 'package:fs_fe/controllers/conversationController.dart';
+import 'package:fs_fe/controllers/user/userController.dart';
+import 'package:fs_fe/services/socketio.dart';
+import 'package:fs_fe/ui/components/backgrounds/chatroom_bg.dart';
+import 'package:fs_fe/ui/screens/chat/widgets/conversation.dart';
+import 'package:fs_fe/ui/screens/chat/widgets/message_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

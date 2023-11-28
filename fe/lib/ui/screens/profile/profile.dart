@@ -1,10 +1,10 @@
-import 'package:familiar_stranger_v2/config/utils/export_file.dart';
-import 'package:familiar_stranger_v2/controllers/user/userController.dart';
-import 'package:familiar_stranger_v2/ui/components/backgrounds/home_bg.dart';
-import 'package:familiar_stranger_v2/ui/components/widgets/buttons/round_button.dart';
-import 'package:familiar_stranger_v2/ui/screens/profile/widgets/avatar.dart';
-import 'package:familiar_stranger_v2/ui/screens/profile/widgets/image_show.dart';
-import 'package:familiar_stranger_v2/ui/screens/profile/widgets/intro_container.dart';
+import 'package:fs_fe/config/utils/export_file.dart';
+import 'package:fs_fe/controllers/user/userController.dart';
+import 'package:fs_fe/ui/components/backgrounds/home_bg.dart';
+import 'package:fs_fe/ui/components/widgets/buttons/round_button.dart';
+import 'package:fs_fe/ui/screens/profile/widgets/avatar.dart';
+import 'package:fs_fe/ui/screens/profile/widgets/image_show.dart';
+import 'package:fs_fe/ui/screens/profile/widgets/intro_container.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
