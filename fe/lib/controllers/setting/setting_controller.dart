@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 
 class SettingController extends GetxController {
   // late Rx<Setting> currentSetting;
-  
+
   RxBool soundActive = true.obs;
   RxBool notificationActive = true.obs;
   RxBool vibrationActive = true.obs;
