@@ -9,6 +9,7 @@ const bodyParser = require('body-parser')
 
 const userRouter = require('./routers/user')
 const musicRouter = require('./routers/music')
+const reportRouter = require('./routers/report')
 const notificationRouter = require('./routers/notification')
 
 mongoose
@@ -30,6 +31,7 @@ mongoose
 
     app.use('/user', userRouter)
     app.use('/music', musicRouter)
+    app.use('/report', reportRouter)
     app.use('/notification', notificationRouter)
 
 module.exports = app 

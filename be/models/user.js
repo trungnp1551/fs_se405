@@ -49,6 +49,10 @@ const userSchema = mongoose.Schema({
     settingId: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Setting'
+    },
+    reportNumber: {
+        type: String,
+        default: 0
     }
 }, {
     versionKey: false
