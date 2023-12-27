@@ -1,0 +1,17 @@
+
+
+body{
+    background-color: #ebeff5;
+}
+
+#total-reports{
+    background-color: #4cb4c7;
+}
+
+#reports-proceeded{
+    background-color: #7abecc;
+}
+
+#reports-pending{
+    background-color: #7CD1C0;
+}
