@@ -1,4 +1,5 @@
 import 'package:fs_fe/config/utils/app_colors.dart';
+import 'package:fs_fe/services/api.dart';
 import 'package:fs_fe/ui/components/backgrounds/home_bg.dart';
 import 'package:fs_fe/ui/components/widgets/buttons/round_button.dart';
 import 'package:fs_fe/ui/screens/chat/widgets/multi_textline.dart';
@@ -62,6 +63,7 @@ class _ReportScreenState extends State<ReportScreen> {
                             textColor: primaryText,
                             text: 'Send',
                             press: () {
+                              sendReport('','');
                               Get.back();
                             }),
                       ],

@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:familiar_stranger_v2/services/socketio.dart';
+import 'package:fs_fe/services/socketio.dart';
 import 'package:get/get.dart';
 
 class CounterController extends GetxController{

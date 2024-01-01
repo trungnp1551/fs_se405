@@ -53,6 +53,10 @@ const userSchema = mongoose.Schema({
     reportNumber: {
         type: String,
         default: 0
+    },
+    banned: {
+        type: Boolean,
+        default: false
     }
 }, {
     versionKey: false

@@ -7,6 +7,9 @@ import 'package:get/get.dart';
 // import 'package:http/http.dart';
 import 'package:socket_io_client/socket_io_client.dart' as socketIO;
 
+var ip = 'http://192.168.2.238:3000';
+// var ip = 'https://8754-171-227-75-132.ngrok-free.app';
+
 late socketIO.Socket socket;
 ConversationController conversationController =
     Get.put(ConversationController());
@@ -15,7 +18,7 @@ NotificationController notificationController =
 MusicController musicController = Get.put(MusicController());
 void connectSocket() {
   socket = socketIO
-      .io('http://10.45.89.39:3000', <String, dynamic>{
+      .io('http://192.168.2.238:3000', <String, dynamic>{
     'transports': ['websocket'],
     'autoConnect': false,
   });

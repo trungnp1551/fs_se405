@@ -2,7 +2,7 @@ import 'package:fs_fe/config/utils/export_file.dart';
 import 'package:fs_fe/controllers/menuController.dart';
 import 'package:fs_fe/controllers/time_counter.dart';
 import 'package:fs_fe/controllers/user/notificationController.dart';
-import 'package:fs_fe/ui/components/widgets/dialog/dialog_yes_no.dart';
+// import 'package:fs_fe/ui/components/widgets/dialog/dialog_yes_no.dart';
 import 'package:fs_fe/ui/screens/friend/list_friend/list_friend.dart';
 import 'package:fs_fe/ui/screens/home/home.dart';
 import 'package:fs_fe/ui/screens/profile/profile.dart';

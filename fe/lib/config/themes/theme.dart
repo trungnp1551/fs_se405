@@ -1,4 +1,4 @@
-import 'package:familiar_stranger_v2/config/utils/export_file.dart';
+import 'package:fs_fe/config/utils/export_file.dart';
 import 'package:flutter/material.dart';
 
 class AppTheme{
