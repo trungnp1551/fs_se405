@@ -38,27 +38,25 @@
                   <th>User Id</th>
                   <th>Username</th>
                   <th>Phone Number</th>
-                  <th>Email</th>
                   <th>ID Fake</th>
-                  <th>Sex</th>
-                  <th>Year of Birth</th>
                   <th>Reported</th>
                   <th>Status</th>
                   <th>Banned Date</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr th:each="user : ${userPage.content}">
+                <tr th:each="user : ${users}">
                   <td th:text="${user.id}"></td>
                   <td th:text="${user.username}"></td>
                   <td th:text="${user.phoneNumber}"></td>
-                  <td th:text="${user.gmail}"></td>
                   <td th:text="${user.id_fake}"></td>
-                  <td th:text="${user.sex}"></td>
-                  <td th:text="${user.yearOfB}"></td>
                   <td th:text="${user.reportNumber}"></td>
                   <td th:text="${user.banned ? 'Banned' : 'Not Banned'}"></td>
                   <td th:text="${user.bannedDate}"></td>
+                  <td>
+                    <a th:if="${!user.banned}" th:href="@{/admin/user/ban/{id}(id=${user.id})}" class="btn btn-success">Ban</a>
+                    <a th:if="${user.banned}" th:href="@{/admin/user/unban/{id}(id=${user.id})}" class="btn btn-warning">Unban</a>
+                  </td>
                 </tr>
                 </tbody>
               </table>

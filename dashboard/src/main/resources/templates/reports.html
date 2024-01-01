@@ -47,12 +47,12 @@
                                 <tr th:each="report : ${reports}">
                                     <td th:text="${report.sender_id}"></td>
                                     <td th:text="${report.target_id}"></td>
-                                    <td>
-                                        <a href="#" th:text="${report.message_id}"></a>
-                                    </td>
+                                    <td th:text="${report.message_id}"></td>
                                     <td th:text="${report.content}"></td>
                                     <td th:text="${report.created_at}"></td>
-                                    <td th:text="${report.proceeded ? 'YES' : 'NO'}"></td>
+                                    <td>
+                                        <a th:if="${!report.proceeded}" th:href="@{/admin/report/proceed/{id}(id=${report.id})}" class="btn btn-success">Review</a>
+                                    </td>
                                 </tr>
                                 </tbody>
                             </table>

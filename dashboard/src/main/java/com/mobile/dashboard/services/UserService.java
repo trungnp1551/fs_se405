@@ -3,14 +3,12 @@ package com.mobile.dashboard.services;
 import com.mobile.dashboard.models.User;
 import com.mobile.dashboard.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import java.util.Collections;
+import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UserService {
@@ -21,19 +19,29 @@ public class UserService {
         return userRepository.findAll();
     }
 
-    public Page<User> findPaginated(Pageable pageable) {
-        int pageSize = pageable.getPageSize();
-        int currentPage = pageable.getPageNumber();
-        int startItem = currentPage * pageSize;
-        List<User> list;
-        List<User> users = userRepository.findAll();
-        if (users.size() < startItem) {
-            list = Collections.emptyList();
-        } else {
-            int toIndex = Math.min(startItem + pageSize, users.size());
-            list = users.subList(startItem, toIndex);
-        }
+    public User getUserById(String id) {
+        Optional<User> optional = userRepository.findById(id);
+        User user = null;
+        if (optional.isPresent()) user = optional.get();
+        else throw new RuntimeException("User not found");
+        return user;
+    }
 
-        return new PageImpl<User>(list, PageRequest.of(currentPage, pageSize), users.size());
+    public void banUser(String id) {
+        User user = userRepository.findById(id).orElse(null);
+        if (user != null) {
+            user.setBanned(true);
+            user.setBannedDate(LocalDateTime.now().toString());
+            userRepository.save(user);
+        }
+    }
+
+    public void unbanUser(String id) {
+        User user = userRepository.findById(id).orElse(null);
+        if (user != null) {
+            user.setBanned(false);
+            user.setBannedDate("");
+            userRepository.save(user);
+        }
     }
 }

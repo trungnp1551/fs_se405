@@ -23,7 +23,6 @@ public class ReportService {
             report.setProceeded(true);
             reportRepository.save(report);
         }
-
     }
 
 }
