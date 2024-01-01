@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head"></head>
+<body class="hold-transition skin-blue sidebar-mini">
+<!-- Site wrapper -->
+<div class="wrapper">
+
+  <div th:replace="fragments/header :: header"></div>
+
+  <!-- =============================================== -->
+
+  <!-- Left side column. contains the sidebar -->
+  <div th:replace="fragments/sidebar :: sidebar"></div>
+
+  <!-- =============================================== -->
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        User List
+      </h1>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+
+      <!-- Default box -->
+      <div class="col-md-12">
+        <div class="box box-info">
+          <div class="box-body">
+            <div class="table-responsive">
+              <table class="table no-margin table-hover">
+                <thead>
+                <tr>
+                  <th>User Id</th>
+                  <th>Username</th>
+                  <th>Phone Number</th>
+                  <th>Email</th>
+                  <th>ID Fake</th>
+                  <th>Sex</th>
+                  <th>Year of Birth</th>
+                  <th>Reported</th>
+                  <th>Status</th>
+                  <th>Banned Date</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="user : ${userPage.content}">
+                  <td th:text="${user.id}"></td>
+                  <td th:text="${user.username}"></td>
+                  <td th:text="${user.phoneNumber}"></td>
+                  <td th:text="${user.gmail}"></td>
+                  <td th:text="${user.id_fake}"></td>
+                  <td th:text="${user.sex}"></td>
+                  <td th:text="${user.yearOfB}"></td>
+                  <td th:text="${user.reportNumber}"></td>
+                  <td th:text="${user.banned ? 'Banned' : 'Not Banned'}"></td>
+                  <td th:text="${user.bannedDate}"></td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.box -->
+
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 3 -->
+
+<script th:src="@{/assets/js/jquery.min.js}"></script>
+<script th:src="@{/assets/js/jquery-ui.js}"></script>
+<script th:src="@{/assets/js/bootstrap.min.js}"></script>
+<script th:src="@{/assets/js/adminlte.min.js}"></script>
+<script th:src="@{/assets/js/dashboard.js}"></script>
+<script th:src="@{/assets/js/function.js}"></script>
+</body>
+</html>

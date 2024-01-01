@@ -31,17 +31,10 @@
                     <div class="box box-info">
                         <div class="box-header with-border">
                             <h3 class="box-title">Latest Banned</h3>
-                            <div class="box-tools pull-right">
-                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i
-                                        class="fa fa-minus"></i>
-                                </button>
-                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i
-                                        class="fa fa-times"></i></button>
-                            </div>
                         </div>
                         <div class="box-body">
                             <div class="table-responsive">
-                                <table class="table no-margin">
+                                <table class="table no-margin table-hover">
                                     <thead>
                                     <tr>
                                         <th>User ID</th>
@@ -66,28 +59,22 @@
                             </div>
                         </div>
                         <div class="box-footer clearfix">
-                            <a href="/admin/report" class="btn btn-sm btn-default btn-flat pull-right">View All Users</a>
+                            <a href="/admin/report" class="btn btn-sm btn-default btn-flat pull-right">View All
+                                Users</a>
                         </div>
                     </div>
                 </div>
                 <br>
-            <!-- /.box -->
+                <!-- /.box -->
                 <!-- Latest Report box -->
                 <div class="col-md-12">
                     <div class="box box-info">
                         <div class="box-header with-border">
                             <h3 class="box-title">Latest Report</h3>
-                            <div class="box-tools pull-right">
-                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i
-                                        class="fa fa-minus"></i>
-                                </button>
-                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i
-                                        class="fa fa-times"></i></button>
-                            </div>
                         </div>
                         <div class="box-body">
                             <div class="table-responsive">
-                                <table class="table no-margin">
+                                <table class="table no-margin table-hover">
                                     <thead>
                                     <tr>
                                         <th>Sender ID</th>
@@ -101,7 +88,9 @@
                                     <tr th:each="report : ${latestReport}">
                                         <td th:text="${report.sender_id}"></td>
                                         <td th:text="${report.target_id}"></td>
-                                        <td th:text="${report.message_id}"></td>
+                                        <td>
+                                            <a href="#" th:text="${report.message_id}"></a>
+                                        </td>
                                         <td th:text="${report.content}"></td>
                                         <td th:text="${report.created_at}"></td>
                                     </tr>
@@ -110,11 +99,69 @@
                             </div>
                         </div>
                         <div class="box-footer clearfix">
-                            <a href="/admin/report" class="btn btn-sm btn-default btn-flat pull-right">View All Report</a>
+                            <a href="/admin/report" class="btn btn-sm btn-default btn-flat pull-right">View All
+                                Report</a>
                         </div>
                     </div>
                 </div>
                 <!-- /.box -->
+                <!-- Latest Banned box -->
+                <div class="col-md-6">
+                    <div class="box box-info">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">Top 3 reported users</h3>
+                        </div>
+                        <div class="box-body">
+                            <div class="table-responsive">
+                                <table class="table no-margin table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>User ID</th>
+                                        <th>Username</th>
+                                        <th>Reported</th>
+                                        <th>Status</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr th:each="user : ${top3}">
+                                        <td th:text="${user.id}"></td>
+                                        <td th:text="${user.username}"></td>
+                                        <td th:text="${user.reportNumber}"></td>
+                                        <td th:text="${user.banned ? 'Banned' : 'Not Banned'}"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Latest Banned box -->
+                <div class="col-md-6">
+                    <div class="box box-info">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">Recent reports</h3>
+                        </div>
+                        <div class="box-body">
+                            <div class="table-responsive">
+                                <table class="table no-margin table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>Report ID</th>
+                                        <th>Created At</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <!-- Iterate over reports if not empty -->
+                                    <tr th:each="report : ${reviewed}" th:if="${not #lists.isEmpty(reviewed)}">
+                                        <td th:text="${report.id}"></td>
+                                        <td th:text="${report.created_at}"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </section>
