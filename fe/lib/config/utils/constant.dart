@@ -13,8 +13,8 @@ int userID = 0;
 //Token ROle
 int tokenRole = 1; // use 1 for Host/Broadcaster, 2 for Subscriber/Audience
 //ServerURL
-String serverUrl = "chewnodejstokengenerator-production.up.railway.app";
-// String serverUrl =
+//String serverUrl = "chewnodejstokengenerator-production.up.railway.app";
+String serverUrl = "localhost:8080";
 //     "localhost:8080"; // The base URL to your token server, for example "https://agora-token-service-production-92ff.up.railway.app" => use for NodeJS
 
 //Token ExpiringTIme

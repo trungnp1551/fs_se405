@@ -1,13 +1,13 @@
 import 'dart:ui';
 
 import 'package:fs_fe/config/utils/export_file.dart';
-import 'package:fs_fe/controllers/user/authController.dart';
+// import 'package:fs_fe/controllers/user/authController.dart';
 import 'package:fs_fe/controllers/user/userController.dart';
 import 'package:fs_fe/ui/components/backgrounds/home_bg.dart';
 import 'package:fs_fe/ui/components/widgets/buttons/round_button.dart';
-import 'package:fs_fe/ui/components/widgets/textfields/multiline_textfield.dart';
-import 'package:fs_fe/ui/components/widgets/textfields/oneline_textfield.dart';
-import 'package:fs_fe/ui/components/widgets/textfields/year_textfield.dart';
+// import 'package:fs_fe/ui/components/widgets/textfields/multiline_textfield.dart';
+// import 'package:fs_fe/ui/components/widgets/textfields/oneline_textfield.dart';
+// import 'package:fs_fe/ui/components/widgets/textfields/year_textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

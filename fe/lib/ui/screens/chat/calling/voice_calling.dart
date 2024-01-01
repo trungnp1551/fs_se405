@@ -16,12 +16,13 @@ class VoiceCallingScreen extends StatefulWidget {
 class _VoiceCallingScreenState extends State<VoiceCallingScreen> {
   final voiceCallFunction = CallingFunction();
   late RtcEngine agoraEngine;
+  // ignore: unused_field
   int? _remoteUid;
   bool isVoice = true; // uid of the remote user
   bool _isJoined = false; // Indicates if the local user has joined the channel
   bool _isMuted = false;
-  bool _isAvoidCam = false;
-  bool _isFrontCam = true;
+  // bool _isAvoidCam = false;
+  // bool _isFrontCam = true;
 
   @override
   void initState() {

@@ -1,9 +1,9 @@
-import 'package:familiar_stranger_v2/controllers/time_counter.dart';
-import 'package:familiar_stranger_v2/models/message.dart';
-import 'package:familiar_stranger_v2/models/user.dart';
-import 'package:familiar_stranger_v2/services/api.dart';
-import 'package:familiar_stranger_v2/services/socketio.dart';
-import 'package:familiar_stranger_v2/ui/screens/chat/chatroom.dart';
+import 'package:fs_fe/controllers/time_counter.dart';
+import 'package:fs_fe/models/message.dart';
+import 'package:fs_fe/models/user.dart';
+import 'package:fs_fe/services/api.dart';
+import 'package:fs_fe/services/socketio.dart';
+import 'package:fs_fe/ui/screens/chat/chatroom.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 

@@ -11,6 +11,9 @@ const reportSchema = mongoose.Schema({
         ref: 'User',
     },
     content: String,
+    proceeded: {
+
+    },
     created_at: {
         type: Date,
         default: Date.now(),

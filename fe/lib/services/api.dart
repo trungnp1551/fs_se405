@@ -13,7 +13,8 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:http/http.dart' as http;
 
-var ip = '10.45.89.39:3000';
+var ip = '192.168.2.238:3000';
+//var ip = '8754-171-227-75-132.ngrok-free.app';
 
 final userData = GetStorage();
 //var token = userData.read('token');
@@ -319,6 +320,26 @@ Future<bool> addFriend(friendId) async {
         headers: ({"authorization": token}));
     var jsonData = jsonDecode(response.body);
     if(jsonData['success'] == true && jsonData['message'] == "Add friend"){
+      return true;
+    }
+    return false;
+  } on Exception catch (e) {
+    debugPrint(e.toString());
+    return false;
+  }
+}
+
+Future<bool> sendReport(targetId, content) async {
+  var token = userController.currentUser.value.token.toString();
+  try {
+    var response = await http.post(Uri.http(ip, '/report/'),
+        body: ({
+          "target_id": targetId, 
+          "content":content
+          }),
+        headers: ({"authorization": token}));
+    var jsonData = jsonDecode(response.body);
+    if(jsonData['success'] == true){
       return true;
     }
     return false;
